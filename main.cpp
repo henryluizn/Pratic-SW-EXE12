@@ -11,7 +11,9 @@ int main()
 	dis1.setProfessor(&prof1);
 	dis1.adicionarConteudoMinistrado("Ponteiros", 4);
 	dis1.adicionarConteudoMinistrado("Referencias", 2);
-	// dis1.imprimirConteudosMinistrados();
+	Console::imprimirDadosDisciplina(dis1);
+	// dis1.removerConteudoMinistrado(1);
+	dis1.limparConteudos();
 	Console::imprimirDadosDisciplina(dis1);
 	return 0;
 }

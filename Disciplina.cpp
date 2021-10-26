@@ -113,7 +113,7 @@ std::list<ConteudoMinistrado*> Disciplina::getConteudos()
 
 
 
-bool Disciplina::limparConteudos()
+void Disciplina::limparConteudos()
 {
 	std::list<ConteudoMinistrado *>::iterator it{this->conteudos.begin()};
 	while(it != this->conteudos.end())
@@ -126,9 +126,9 @@ bool Disciplina::limparConteudos()
 		}else
 		{
 			it++;
-		}
-				
+		}		
 	}
+	delete[] &this->conteudos;
 }
 
 

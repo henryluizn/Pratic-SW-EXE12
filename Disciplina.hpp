@@ -34,7 +34,7 @@ class Disciplina{
 		void adicionarConteudoMinistrado(std::string conteudo, unsigned short cargaHorariaConteudo);
 		void imprimirConteudosMinistrados();
 		std::list<ConteudoMinistrado*> getConteudos();
-		bool Disciplina::limparConteudos();
+		void limparConteudos();
 		void removerConteudoMinistrado(unsigned long id);
 
 	private:
