@@ -109,3 +109,40 @@ std::list<ConteudoMinistrado*> Disciplina::getConteudos()
 {
 	return this->conteudos;
 }
+
+
+
+
+bool Disciplina::limparConteudos()
+{
+	std::list<ConteudoMinistrado *>::iterator it{this->conteudos.begin()};
+	while(it != this->conteudos.end())
+	{
+		if ((*it) != nullptr)
+		{
+			delete *it;
+			it = this->conteudos.erase(it);
+			std::cout << "\nConteudo removido com sucesso" << std::endl;
+		}else
+		{
+			it++;
+		}
+				
+	}
+}
+
+
+void Disciplina::removerConteudoMinistrado(unsigned long id)
+{
+	std::list<ConteudoMinistrado *>::iterator it;
+	for (it = this->conteudos.begin(); it != this->conteudos.end(); it++)
+	{
+		if ((*it)->getId() == id)
+		{
+			std::cout << "\nRemovendo conteúdo " << (*it)->getDescricao() << std::endl;
+			this->conteudos.remove((*it));
+			break;
+		}
+		
+	}
+}
