@@ -30,7 +30,9 @@ class Disciplina{
 		SalaAula* getSalaAula();
 
 		void imprimeDados(std::string& cabecalho, unsigned int& cargaTotalCurso);
+
 		// novas implementacoes
+
 		void adicionarConteudoMinistrado(std::string conteudo, unsigned short cargaHorariaConteudo);
 		void imprimirConteudosMinistrados();
 		std::list<ConteudoMinistrado*> getConteudos();
