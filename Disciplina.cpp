@@ -111,8 +111,6 @@ std::list<ConteudoMinistrado*> Disciplina::getConteudos()
 }
 
 
-
-
 void Disciplina::limparConteudos()
 {
 	std::list<ConteudoMinistrado *>::iterator it{this->conteudos.begin()};
@@ -143,6 +141,5 @@ void Disciplina::removerConteudoMinistrado(unsigned long id)
 			this->conteudos.remove((*it));
 			break;
 		}
-		
 	}
 }
