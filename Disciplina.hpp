@@ -9,6 +9,7 @@ class SalaAula;//forward declaration
 class ConteudoMinistrado;
 
 class Disciplina{
+	friend class SalaAula;
 	public:
 		Disciplina(std::string nome, SalaAula* sala);
 

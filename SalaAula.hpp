@@ -6,6 +6,7 @@
 #include "Disciplina.hpp"
 
 class SalaAula{
+	friend class Disciplina;
 	public:
 		SalaAula(std::string nome, unsigned int capacidade);
 		
@@ -16,7 +17,6 @@ class SalaAula{
 		void setCapcidade(unsigned int capacidade);
 
 		void adicionarDisciplina(Disciplina* disciplina);
-		void removerDisciplina(Disciplina* disciplina);
 		std::list<Disciplina*>& getDisciplinas();
 	private:
 		std::string nome;

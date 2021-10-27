@@ -67,9 +67,17 @@ void Disciplina::setProfessor(Pessoa *professor)
 
 void Disciplina::setSalaAula(SalaAula *sala)
 {
-	//precisariamos ainda verificar se sala não é nullptr
-	//faremos isso no tópico exceções no futuro
-	this->sala = sala;
+	if (this->sala != nullptr)
+	{
+		this->sala->disciplinasMinistradas.remove(this);
+		this->sala = sala;
+		sala->disciplinasMinistradas.push_back(this);
+	}
+	else
+	{
+		this->sala = sala;
+		sala->disciplinasMinistradas.push_back(this);
+	}
 }
 SalaAula *Disciplina::getSalaAula()
 {
