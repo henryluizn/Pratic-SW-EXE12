@@ -1,5 +1,5 @@
 parametrosCompilacao=-Wall #-Wshadow
-nomePrograma=aula
+nomePrograma=exe12
 
 all: $(nomePrograma)
 
