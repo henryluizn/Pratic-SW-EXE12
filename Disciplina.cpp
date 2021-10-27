@@ -145,7 +145,7 @@ void Disciplina::removerConteudoMinistrado(unsigned long id)
 	{
 		if ((*it)->getId() == id)
 		{
-			std::cout << "\nRemovendo conteúdo " << (*it)->getDescricao() << std::endl;
+			std::cout << "\nRemovendo conteúdo " << (*it)->getDescricao() << "\n" << std::endl;
 			this->conteudos.remove((*it));
 			break;
 		}
